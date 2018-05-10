@@ -1,14 +1,19 @@
+$color: #fff;
+$bg-color: #222;
 .App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #222;
-  height: 8rem;
-  padding: 1rem;
-  color: white;
-}
-
-.App-title {
-  font-size: 2.5em;
+    text-align: center;
+    .App-header {
+        background-color: $bg-color;
+        height: 8rem;
+        padding: 1rem;
+        color: $color;
+        .App-title {
+            font-size: 2.5em;
+        }
+    }
+    .Container {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+    }
 }

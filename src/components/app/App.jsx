@@ -11,14 +11,16 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Welcome to Movies Now</h1>
         </header>
-        
-        <MuiThemeProvider>
-          <TextField
-            hintText="Type to search for a movie"
-          />
-          <FontIcon className="material-icons" color={blue500}>search</FontIcon>
 
-        </MuiThemeProvider>
+        <div className="Container">
+          <MuiThemeProvider>
+            <TextField
+              hintText="Type to search for a movie"
+            />
+            <FontIcon className="material-icons" color={blue500}>search</FontIcon>
+
+          </MuiThemeProvider>
+        </div>
       </div>
     );
   }
