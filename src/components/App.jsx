@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { TextField, FontIcon } from 'material-ui';
 import { blue500 } from 'material-ui/styles/colors';
-import './App.scss';
+import '../styles/App.scss';
+import CardPanel from './Card-panel';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             />
             <FontIcon className="material-icons" color={blue500}>search</FontIcon>
 
+            <CardPanel/>
           </MuiThemeProvider>
         </div>
       </div>
