@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import SearchContainer from './hoc/SearchContainer';
-import moveisContainer from './moveis-container';
+import MoviesContainer from './Movies-container';
 
 class CardPanel extends Component {
     render() {
         const EnhancedComponent = SearchContainer(
-            moveisContainer,
+            MoviesContainer,
             'batman'
         );
 

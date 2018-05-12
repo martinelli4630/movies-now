@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { get } from 'lodash';
 import CardItem from '../views/CardItem';
+import '../styles/Moveis-container.scss'
 
-class moviesContainer extends Component {
+class MoviesContainer extends Component {
 
     buildCard(results) {
         return (
-            <div>
-                {results.map((i, k) =>  <div key={k}>{ CardItem( i )}</div> )}
+            <div className='movies-container'>
+                {results.map(i =>  CardItem(i))}
             </div>
         );
     }
@@ -26,4 +27,4 @@ class moviesContainer extends Component {
     }
 }
 
-export default moviesContainer;
+export default MoviesContainer;
