@@ -20,7 +20,7 @@ class App extends Component {
             />
             <FontIcon className="material-icons" color={blue500}>search</FontIcon>
 
-            <CardPanel/>
+            <CardPanel value='batman'/>
           </MuiThemeProvider>
         </div>
       </div>

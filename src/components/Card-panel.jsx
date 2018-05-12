@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SearchContainer from './hoc/SearchContainer';
 import MoviesContainer from './Movies-container';
 
-class CardPanel extends Component {
-    render() {
-        const EnhancedComponent = SearchContainer(
-            MoviesContainer,
-            'batman'
-        );
+const CardPanel = (search) => {
+    const EnhancedComponent = SearchContainer(
+        MoviesContainer,
+        search.value
+    );
 
-        return (
-            <div>
-                <EnhancedComponent />
-            </div>
-        );
-    }
+    return (
+        <EnhancedComponent />
+    );
 }
 
 export default CardPanel;
