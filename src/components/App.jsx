@@ -3,7 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { TextField, FontIcon } from 'material-ui';
 import { blue500 } from 'material-ui/styles/colors';
 import '../styles/App.scss';
-import CardPanel from './Card-panel';
+import CardPanel from '../views/Card-panel';
 
 class App extends Component {
   render() {

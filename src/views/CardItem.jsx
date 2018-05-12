@@ -3,8 +3,8 @@ import '../styles/CardItem.scss';
 
 const baseUrl = "https://image.tmdb.org/t/p/w342";
 
-const CardItem = (item) => {
-    const { id, title, overview, release_date, vote_average, poster_path  } = item;
+const CardItem = (obj) => {
+    const { id, title, overview, release_date, vote_average, poster_path  } = obj.item;
 
     return (
         <div key={id} className='card-box'>

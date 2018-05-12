@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchContainer from './hoc/SearchContainer';
+import SearchContainer from '../components/hoc/SearchContainer';
 import MoviesContainer from './Movies-container';
 
 const CardPanel = (search) => {
