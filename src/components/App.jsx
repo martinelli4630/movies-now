@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { TextField, FontIcon } from 'material-ui';
-import { blue500 } from 'material-ui/styles/colors';
+import { blue500, blue800 } from 'material-ui/styles/colors';
 import '../styles/App.scss';
 import CardPanel from '../views/Card-panel';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -15,12 +16,15 @@ class App extends Component {
 
         <div className="Container">
           <MuiThemeProvider>
-            <TextField
-              hintText="Type to search for a movie"
-            />
-            <FontIcon className="material-icons" color={blue500}>search</FontIcon>
+            <div className='search-box'>
+              <TextField
+                className='search-field'
+                hintText="Type to search for a movie"
+              />
+              <FontIcon className="material-icons search-icon" color={blue500} hoverColor={blue800}>search</FontIcon>
+            </div>
 
-            <CardPanel value='batman'/>
+            <CardPanel value='batman' />
           </MuiThemeProvider>
         </div>
       </div>

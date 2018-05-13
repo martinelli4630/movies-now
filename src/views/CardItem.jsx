@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontIcon } from 'material-ui';
+import { yellow600 } from 'material-ui/styles/colors';
 import '../styles/CardItem.scss';
 
 const baseUrl = "https://image.tmdb.org/t/p/w342";
@@ -12,8 +14,8 @@ const CardItem = (obj) => {
                 <p className='title'>{title}</p>
                 <span><strong>Release Date:</strong> {release_date}</span>
                 <span className='rate'><strong>Ratings:</strong>
-                    {vote_average}
-                    <i className='material-icons'>star_rate</i>
+                    {vote_average} 
+                    <FontIcon className="material-icons" color={yellow600}>star_rate</FontIcon>
                 </span>
                 <span><strong>Overview:</strong></span>
                 <span>{overview}</span>
