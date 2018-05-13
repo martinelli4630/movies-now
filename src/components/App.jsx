@@ -2,10 +2,30 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { TextField, FontIcon } from 'material-ui';
 import { blue500, blue800 } from 'material-ui/styles/colors';
-import '../styles/App.scss';
 import CardPanel from '../views/Card-panel';
+import { connect } from 'react-redux';
+import { search } from '../actions';
+import '../styles/App.scss';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      query: ''
+    };
+  }
+
+  search() {
+    this.props.search(this.state.query);
+  }
+
+  handleKeyPress(event) {
+    if (event.charCode === 13) {
+      this.search()
+    }
+  }
 
   render() {
     return (
@@ -20,11 +40,16 @@ class App extends Component {
               <TextField
                 className='search-field'
                 hintText="Type to search for a movie"
+                onKeyPress={(e) => this.handleKeyPress(e)}
+                onChange={(e) => this.setState({ query: e.target.value })}
               />
-              <FontIcon className="material-icons search-icon" color={blue500} hoverColor={blue800}>search</FontIcon>
+              <FontIcon className="material-icons search-icon"
+                color={blue500}
+                hoverColor={blue800}
+                onClick={() => this.search()}>search</FontIcon>
             </div>
 
-            <CardPanel value='batman' />
+            <CardPanel />
           </MuiThemeProvider>
         </div>
       </div>
@@ -32,4 +57,12 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    search: (obj) => {
+      dispatch(search(obj));
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);;
