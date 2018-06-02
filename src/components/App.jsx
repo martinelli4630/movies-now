@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   search() {
-    this.props.search(this.state.query);
+    this.props.onSearch(this.state.query);
   }
 
   handleKeyPress(event) {
@@ -57,11 +57,9 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    search: (obj) => {
-      dispatch(search(obj));
-    }
+    onSearch: (searchTerm) => dispatch(search(searchTerm))
   }
 }
 

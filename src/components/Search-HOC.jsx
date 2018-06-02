@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { API_KEY } from '../access-key.js';
 
-const SearchContainer = (HocComponent, query, success, fail) => {
+const SearchContainer = (HocComponent, query, onSuccess, onFail) => {
     return class extends Component {
         constructor(props) {
             super(props);
@@ -19,11 +19,11 @@ const SearchContainer = (HocComponent, query, success, fail) => {
                 axios.get(url)
                     .then(json => {
                         this.setState({ data: json.data })
-                        success(json.data)
+                        onSuccess(json.data)
                     })
                     .catch((error) => {
                         console.log(error);
-                        fail(error);
+                        onFail(error);
                     });
             }
         }

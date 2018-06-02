@@ -3,8 +3,8 @@ import { get } from 'lodash';
 import CardItem from '../views/CardItem';
 import '../styles/Moveis-container.scss'
 
-const MoviesContainer = (obj) => {
-    const data = obj.data;
+const MoviesContainer = props => {
+    const data = props.data;
     return (
         <div>
             {(get(data, 'results')) ?
@@ -15,7 +15,7 @@ const MoviesContainer = (obj) => {
     );
 }
 
-const buildCard = (results) => {
+const buildCard = results => {
     return (
         <div className='movies-container'>
             {results.map((i, k)=>  <CardItem item={i} key={k}/>)}

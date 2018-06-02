@@ -4,13 +4,13 @@ import MoviesContainer from './Movies-container';
 import { connect } from 'react-redux';
 import { searchSuccess, searchFail } from '../actions';
 
-const CardPanel = (search) => {
-    const { query, success, fail } = search;
+const CardPanel = (props) => {
+    const { query, onSuccess, onFail } = props;
     const EnhancedComponent = SearchContainer(
         MoviesContainer,
         query,
-        success,
-        fail
+        onSuccess,
+        onFail
     );
 
     return (
@@ -18,19 +18,15 @@ const CardPanel = (search) => {
     );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const { query } = state.search;
     return { query };
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
-        success: (obj) => {
-            dispatch(searchSuccess(obj));
-        },
-        fail: (obj) => {
-            dispatch(searchFail(obj));
-        }
+        onSuccess: (payload) => dispatch(searchSuccess(payload)),
+        onFail: (payload) => dispatch(searchFail(payload))
     }
 }
 
