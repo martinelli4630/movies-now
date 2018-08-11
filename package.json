@@ -8,6 +8,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "dependencies": {
+    "@material-ui/core": "^1.4.3",
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "babel-core": "6.26.0",
@@ -21,6 +22,8 @@
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "4.10.0",
     "eslint-config-react-app": "^2.1.0",
     "eslint-loader": "1.9.0",
@@ -58,7 +61,10 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"],
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
     ],

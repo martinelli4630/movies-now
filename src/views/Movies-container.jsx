@@ -5,20 +5,15 @@ import '../styles/Moveis-container.scss'
 
 const MoviesContainer = props => {
     const data = props.data;
-    return (
-        <div>
-            {(get(data, 'results')) ?
-                buildCard(data.results) :
-                null
-            }
-        </div>
-    );
+    return get(data, 'results') ?
+        <div>{buildCard(data.results)}</div>
+        : null;
 }
 
 const buildCard = results => {
     return (
         <div className='movies-container'>
-            {results.map((i, k)=>  <CardItem item={i} key={k}/>)}
+            {results.map((i, k) => <CardItem item={i} key={k} />)}
         </div>
     );
 }
