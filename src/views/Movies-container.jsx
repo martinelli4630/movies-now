@@ -1,6 +1,6 @@
 import React from 'react';
 import { get } from 'lodash';
-import CardItem from '../views/CardItem';
+import CardItem from '../views/Card-item';
 import '../styles/Moveis-container.scss'
 
 const MoviesContainer = props => {

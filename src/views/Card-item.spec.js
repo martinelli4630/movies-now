@@ -1,7 +1,7 @@
 import {
     shallow
 } from 'enzyme';
-import CardItem from './CardItem';
+import CardItem from './Card-item';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
