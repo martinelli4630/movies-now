@@ -15,7 +15,7 @@ const props = {
     results: [{}, {}]
 };
 
-jest.mock('./CardItem', () => ()=> <div className='card-box'>mockUserCom</div>)
+jest.mock('./Card-item', () => ()=> <div className='card-box'>mockUserCom</div>)
 
 describe('MoviesContainer test', () => {
     it('should create MoviesContainer correctly using props params', () => {

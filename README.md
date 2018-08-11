@@ -21,13 +21,12 @@ To run this project you'll need development dependencies of which run on Node.js
  Clone the project from github
 ```
   https://github.com/mlassakoski/movies-now.git
-  
 ```
 Open a terminal and use `cd` to enter into directory where you clone the project.
 ```
 cd <movies-now>
 yarn install
-# OR
+OR
 npm install
 ```
 
@@ -36,7 +35,7 @@ npm install
 Inside project directory execute:
 ```
 yarn start 
-# OR
+OR
 npm start
 ```
 Go to `localhost:3000` to access the application.
