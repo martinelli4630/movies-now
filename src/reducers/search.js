@@ -1,6 +1,6 @@
 import { SEARCH, SEARCH_SUCCESS, SEARCH_FAIL} from '../actions';
 
-const initialState = {
+export const initialState = {
     query: '',
     data: {}
 }

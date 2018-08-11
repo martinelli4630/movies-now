@@ -57,6 +57,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
     ],
